@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root{
+  font-size: 20px;
+}
+body {
+  overflow: hidden;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Game Container Styles */
+.gameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1600px;
+  height: 90%;
+}
+
+/* Board Styles */
+#board {
+  width: 30rem;
+  height: 30rem;
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
+    radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.50) 50%);
+  border: 4px solid #999;
+  background-blend-mode: soft-light, screen;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+}
+
+.infoContainer {
+  margin-left: 2rem;
+  width: 15rem;
+  height: 100%;
+  background-color: #fff;
+  padding: 1rem 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.infoContainer h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2575fc;
+}
+
+.scoreContainer h2 {
+  font-size: 2rem;
+  color: #6a11cb;
+  text-align: center;
+}
+
+.instructions {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.instructions h3 {
+  margin-bottom: 1rem;
+  color: #ff512f;
+}
+
+/* Snake Head Styles */
+.head {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(221, 36, 118, 0.7);
+}
+
+/* Snake Body Styles */
+.body {
+  background: linear-gradient(45deg, #ff512f, #ff5e62);
+  border-radius: 50%;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Food Styles */
+.food {
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  box-shadow: 0 0 8px rgba(255, 94, 98, 0.8);
+  animation: pulse 1s infinite;
+}
+
+/* Animation for Food */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (min-width:2000px) {
+  :root{
+    font-size: 28px;
+  }
+}
+@media (max-width:2000px) {
+  :root {
+    font-size: 28px;
+  }
+}
+@media (max-width:1600px) {
+  :root {
+    font-size: 16px;
+  }
+}
+@media (max-width:1250px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media (max-width:700px) {
+  :root {
+    font-size: 10px;
+  }
+  .infoContainer{
+    height: 80%;
+  }
+}
+@media (max-width:500px) {
+  :root {
+    font-size: 8px;
+  }
+
+  .infoContainer {
+    height: 60%;
+  }
+}
+@media (max-width:500px) {
+  :root {
+    font-size: 5px;
+  }
+
+  .infoContainer {
+    height: 40%;
+  }
+}
